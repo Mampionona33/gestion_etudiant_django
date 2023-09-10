@@ -38,7 +38,7 @@ Ce projet est une application web de gestion scolaire simplifiée, conçue pour 
 
 ## Installation et Exécution
 
-Pour éditer le fichier .dio dans le dossier "schema", vous pouvez installer l'extension VS Code "Draw.io Integration" ou utiliser l'application web "https://app.diagrams.net/".
+Pour éditer le fichier .dio dans le dossier "schema", vous pouvez installer l'extension VS Code "Draw.io Integration" ou utiliser l'application web [diagrams.net](https://app.diagrams.net/).
 
 1. Clonez ce dépôt sur votre machine locale.
 
