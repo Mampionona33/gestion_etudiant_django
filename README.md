@@ -33,13 +33,15 @@ Ce projet est une application web de gestion scolaire simplifiée, conçue pour 
 
 ## Capture d'Écran
 
-![Capture d'écran de l'application](screenshot.png)
+![Diagramme MLD](./schema/MLD.jpg)
+![Diagramme MCD](./schema/MCD.jpg)
 
 ## Installation et Exécution
+
+Pour éditer le fichier .dio dans le dossier "schema", vous pouvez installer l'extension VS Code "Draw.io Integration" ou utiliser l'application web "https://app.diagrams.net/".
 
 1. Clonez ce dépôt sur votre machine locale.
 
    ```bash
    git clone https://github.com/Mampionona33/gestion_etudiant_django
-
    ```
