@@ -68,6 +68,10 @@ const config = {
       },
     ],
   },
+  stats: {
+    // remove warning from bootsrap abs error in sass-loader
+    warningsFilter: [/css-loader.*style\.scss/],
+  },
 };
 
 module.exports = () => {
