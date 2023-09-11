@@ -1,5 +1,6 @@
-{% extends "./base.html" %}
+{% extends "../base.html" %}
 
 {% block content %}
 	<h1 class="d-flex bg-primary">test index</h1>
+	<a href="{% url 'logout' %}">logout</a>
 {% endblock %}

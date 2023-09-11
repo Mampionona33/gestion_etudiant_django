@@ -33,6 +33,10 @@ CSRF_TRUSTED_ORIGINS = [
    "https://cx8h58-8000.csb.app",
 ]
 
+LOGIN_REDIRECT_URL = '/'
+
+LOGIN_URL = '/login/'
+
 # Application definition
 
 INSTALLED_APPS = [

@@ -1,0 +1,28 @@
+{% extends "../base.html" %}
+
+{% block content %}
+    <div class="container ">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-md-6 shadow rounded">
+                <h2 class="mt-4 mb-3">Log In</h2>
+                <form class="login-form" name="LoginForm" action="/" method="post">
+                    {% csrf_token %}
+                    {% if next %}
+                        <input type="hidden" name="next" value="{{ next }}" />
+                    {% endif %}
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+                    </div>
+                    <div class="mb-3 text-center">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
