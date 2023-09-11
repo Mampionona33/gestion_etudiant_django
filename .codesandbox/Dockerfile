@@ -34,6 +34,18 @@ RUN /bin/bash -c "source venv/bin/activate"
 # Installez Django
 RUN pip install django
 
+# Installez npm et npx
+RUN apt-get install -y npm
+
+# Vérifiez l'installation de npm
+RUN npm -v
+
+# Installez npx
+RUN npm install -g npx
+
+# Vérifiez l'installation de npx
+RUN npx -v
+
 # Installez docker-compose en utilisant curl
 RUN curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 RUN chmod +x /usr/local/bin/docker-compose
