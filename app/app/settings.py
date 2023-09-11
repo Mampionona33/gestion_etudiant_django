@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["localhost","cx8h58-8000.fc-eu-0.pitcher.csb.app"]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
+CSRF_TRUSTED_ORIGINS = [
+   "https://cx8h58-8000.csb.app",
+]
 
 # Application definition
 
