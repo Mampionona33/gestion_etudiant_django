@@ -16,7 +16,7 @@ const config = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: '[name]-bundle.css',
     }),
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
