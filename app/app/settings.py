@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-h6x&3n53)fj002a%eb(kq(lr(1dopef5wz*wb6_i)djmcs644k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost","65tfy8-8000.fc-eu-0.pitcher.csb.app","127.0.0.1"]
+ALLOWED_HOSTS = ["localhost",
+                 "65tfy8-8000.fc-eu-0.pitcher.csb.app", "127.0.0.1"]
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-   "https://65tfy8-8000.csb.app",
+    "https://65tfy8-8000.csb.app",
 ]
 
 LOGIN_REDIRECT_URL = '/'
@@ -128,7 +129,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static', 'localhost:8000/static'
+    BASE_DIR / 'static',
 ]
 
 # Default primary key field type

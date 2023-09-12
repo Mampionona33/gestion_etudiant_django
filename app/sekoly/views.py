@@ -4,11 +4,13 @@ from django.contrib.auth.decorators import user_passes_test, login_required
 from .models import Classe
 from django.contrib.auth.models import Group, User
 from django.contrib.admin.models import LogEntry
+from django.contrib.auth.models import Permission
 from django.contrib.sessions.models import Session
+from django.contrib.contenttypes.models import ContentType
 from django.apps import apps
 
 # Create your views here.
-excluded_models = [Group, User, LogEntry, Session,]
+excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]
 
 
 def is_responsable(user):
@@ -28,7 +30,7 @@ def index_responsable(request):
     ]
     print(apps.get_models())
     model_names_plural = [
-        model._meta.verbose_name_plural for model in admin_models if model._meta.model_name not in ['permission', 'contenttype']
+        model._meta.verbose_name_plural for model in admin_models
     ]
     return render(request, "sekoly/index_responsable.html", {'model_names_plural': model_names_plural})
 
