@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import user_passes_test, login_required
+from .models import Classe
 # Create your views here.
 
 def is_responsable(user):
@@ -12,7 +13,8 @@ def is_etudiant(user):
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def index_responsable(request):
-    return render(request, "sekoly/index_responsable.html")
+    class_list = Classe.objects.all()
+    return render(request, "sekoly/index_responsable.html",{'class_list': class_list})
 
 @login_required(login_url='login')
 @user_passes_test(is_etudiant, login_url='login')
