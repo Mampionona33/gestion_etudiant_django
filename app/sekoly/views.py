@@ -58,3 +58,7 @@ def index(request):
 
     # Si l'utilisateur n'est pas connecté ou la connexion a échoué, redirigez-le vers la page de connexion
     return redirect("login")
+
+
+def list_etudiants(request):
+    return render(request, "sekoly/list_etudiants.html")
