@@ -2,6 +2,9 @@
 
 {% block content %}
 	<h1 class="d-flex bg-primary">Bienvenue résponsable</h1>
-	{{class_list}}
+	<!-- {{class_list}} -->
+	{% for class in class_list %}
+		{{class}}
+	{% endfor %}
 	<a href="{% url 'logout' %}">logout</a>
 {% endblock %}
