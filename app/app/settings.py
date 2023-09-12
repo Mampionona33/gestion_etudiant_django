@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ["localhost","65tfy8-8000.fc-eu-0.pitcher.csb.app","127.0.0.1"]
 CORS_ALLOW_ALL_ORIGINS = True
 
 CSRF_TRUSTED_ORIGINS = [
-   "https://cx8h58-8000.csb.app",
+   "https://65tfy8-8000.csb.app",
 ]
 
 LOGIN_REDIRECT_URL = '/'
