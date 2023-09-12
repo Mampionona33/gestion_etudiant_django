@@ -1,5 +1,20 @@
 {% extends "../base.html" %}
 
 {% block content %}
-	<p>list étudiants</p>
+	<table>
+		<thead>
+			<tr>
+				<th>List étudiants</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for etudiant in list_etudiants %}
+				<tr>
+					<td>
+						<a href="">{{etudiant}}</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 {% endblock %}

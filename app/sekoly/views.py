@@ -1,10 +1,9 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import user_passes_test, login_required
-from .models import Classe
-from django.contrib.auth.models import Group, User
+from .models import Classe, Etudiant
+from django.contrib.auth.models import Group, User, Permission
 from django.contrib.admin.models import LogEntry
-from django.contrib.auth.models import Permission
 from django.contrib.sessions.models import Session
 from django.contrib.contenttypes.models import ContentType
 from django.apps import apps
@@ -28,7 +27,6 @@ def index_responsable(request):
     admin_models = [
         model for model in apps.get_models() if model not in excluded_models
     ]
-    print(apps.get_models())
     model_names_plural = [
         model._meta.verbose_name_plural for model in admin_models
     ]
@@ -61,4 +59,6 @@ def index(request):
 
 
 def list_etudiants(request):
-    return render(request, "sekoly/list_etudiants.html")
+    etudiants = Etudiant.objects.all()
+    print(etudiants)
+    return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants})
