@@ -27,6 +27,9 @@ class ClasseMatiere(models.Model):
     classe = models.ForeignKey('Classe', on_delete=models.CASCADE)
     matiere = models.ForeignKey('Matiere', on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f"{self.classe} / {self.matiere}"
+
 class Filiere(models.Model):
     idFiliere = models.AutoField(primary_key=True)
     libelle = models.CharField(max_length=255)
