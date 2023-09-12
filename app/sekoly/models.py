@@ -1,10 +1,10 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 # Create your models here.
 
-
 class Etudiant(models.Model):
-    idEtudiant = models.AutoField(primary_key=True)
+    idEtudiant = models.AutoField(primary_key=True, default=1)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  # Crée une relation 1-1 avec la classe User de Django
     nom = models.CharField(max_length=255)
     prenom = models.CharField(max_length=255)
     dateDeNaissance = models.DateField()
