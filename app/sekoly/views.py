@@ -2,19 +2,36 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import user_passes_test, login_required
 from .models import Classe
+from django.contrib.auth.models import Group, User
+from django.contrib.admin.models import LogEntry
+from django.contrib.sessions.models import Session
+from django.apps import apps
+
 # Create your views here.
+excluded_models = [Group, User, LogEntry, Session,]
+
 
 def is_responsable(user):
     return user.groups.filter(name='responsable').exists()
 
+
 def is_etudiant(user):
     return user.groups.filter(name='etudiant').exists()
+
 
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def index_responsable(request):
-    class_list = Classe.objects.all()
-    return render(request, "sekoly/index_responsable.html",{'class_list': class_list})
+    # Récupérez la liste de tous les modèles enregistrés dans l'administration
+    admin_models = [
+        model for model in apps.get_models() if model not in excluded_models
+    ]
+    print(apps.get_models())
+    model_names_plural = [
+        model._meta.verbose_name_plural for model in admin_models if model._meta.model_name not in ['permission', 'contenttype']
+    ]
+    return render(request, "sekoly/index_responsable.html", {'model_names_plural': model_names_plural})
+
 
 @login_required(login_url='login')
 @user_passes_test(is_etudiant, login_url='login')
@@ -27,7 +44,7 @@ def index(request):
         username = request.POST["username"]
         password = request.POST["password"]
         user = authenticate(request, username=username, password=password)
-        
+
         if user is not None and user.is_authenticated:
             login(request, user)
             groups = user.groups.all()
@@ -39,5 +56,3 @@ def index(request):
 
     # Si l'utilisateur n'est pas connecté ou la connexion a échoué, redirigez-le vers la page de connexion
     return redirect("login")
-
-

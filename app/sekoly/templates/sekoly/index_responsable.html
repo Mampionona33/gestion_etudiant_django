@@ -2,9 +2,22 @@
 
 {% block content %}
 	<h1 class="d-flex bg-primary">Bienvenue résponsable</h1>
-	<!-- {{class_list}} -->
-	{% for class in class_list %}
-		{{class}}
-	{% endfor %}
 	<a href="{% url 'logout' %}">logout</a>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Tableau de bord</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for model_name_plural in model_names_plural %}
+				<tr>
+					<td class="text-capitalize">
+						{{ model_name_plural }}
+					</td>
+				</tr>
+			{% endfor %}
+
+		</tbody>
+	</table>
 {% endblock %}
