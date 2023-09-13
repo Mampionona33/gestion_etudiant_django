@@ -109,10 +109,52 @@ def classe_add(request):
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def classe_detail(request, idClasse):
-    # Utilisez get_object_or_404 pour obtenir l'objet Classe ou renvoyer une 404 si elle n'existe pas
     selected_classe = get_object_or_404(Classe, idClasse=idClasse)
     sidebar_items = sidebar_contents()
     filieres = Filiere.objects.all()
     niveaux = Niveau.objects.all()
 
     return render(request, "sekoly/classe_detail.html", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe, 'filieres': filieres, 'niveaux': niveaux})
+
+
+@login_required(login_url='login')
+@user_passes_test(is_responsable, login_url='login')
+def classe_update(request, idClasse):
+    selected_classe = get_object_or_404(Classe, idClasse=idClasse)
+    sidebar_items = sidebar_contents()
+    filieres = Filiere.objects.all()
+    niveaux = Niveau.objects.all()
+
+    if request.method == 'POST':
+        # Récupérer les données du formulaire
+        libelle = request.POST['libelle']
+        filiere_id = request.POST['filiere']
+        niveau_id = request.POST['niveau']
+
+        try:
+            # Vérifier si une classe avec le même libellé existe déjà (à l'exception de la classe actuelle)
+            existing_classe = Classe.objects.exclude(
+                idClasse=idClasse).filter(libelle=libelle).first()
+            if existing_classe:
+                request.session['error_message'] = 'Une classe avec ce libellé existe déjà.'
+            else:
+                # Mettre à jour les attributs de la classe
+                selected_classe.libelle = libelle
+
+                # Assurez-vous que les ID de filière et de niveau sont valides
+                filiere = Filiere.objects.get(pk=filiere_id)
+                niveau = Niveau.objects.get(pk=niveau_id)
+
+                selected_classe.filiere = filiere
+                selected_classe.niveau = niveau
+
+                # Enregistrez les modifications
+                selected_classe.save()
+
+                # Redirigez vers la page de détail de la classe mise à jour
+                return redirect('detail', idClasse=idClasse)
+        except (Filiere.DoesNotExist, Niveau.DoesNotExist):
+            # Gérez les erreurs si la filière ou le niveau n'existe pas
+            request.session['error_message'] = 'Filière ou niveau invalide.'
+
+    return render(request, "sekoly/classe_update.html", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe, 'filieres': filieres, 'niveaux': niveaux})
