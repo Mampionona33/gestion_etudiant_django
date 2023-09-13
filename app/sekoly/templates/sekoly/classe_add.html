@@ -3,21 +3,32 @@
 {% block content %}
     <div class="container">
         <h3 class="text-capitalize" >ajout classe</h3>
-        <form action="" class="">
-            <div class="form-group">
-                <label class="h5" for="libelle">libelle: </label>
-                <input class="form-control" type="text" name="libelle" id="libelle">
+        <form action="" class="d-flex flex-column gap-2">
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label h5 text-capitalize" for="libelle">libelle: </label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="text" name="libelle" id="libelle">
+                </div>
             </div>
-            <div class="form-group">
-                <label class="h5" for="filiere">Filière: </label>
-                <select class="form-control" name="filiere" id="filiere" >
-                    {% for filier in filieres %}
-                    <option value="{{filier}}">{{filier}}</option>
-                    {% endfor %}
-                </select>
+            <div class="form-group row">
+                <label class="h5 col-sm-2 col-form-label text-capitalize" for="filiere">Filière: </label>
+                <div class="col-sm-4">
+                    <select class="form-control" name="filiere" id="filiere" >
+                        {% for filier in filieres %}
+                        <option value="{{filier}}">{{filier}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label class="h5" for="niveau">niveau</label>
+            <div class="form-group row">
+                <label class="h5 col-sm-2 col-form-label text-capitalize" for="niveau">niveau</label>
+                <div class="col-sm-4">
+                    <select class="form-control" name="niveau" id="niveau" >
+                        {% for niveau in niveaux %}
+                        <option value="{{niveau}}">{{niveau}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
             </div>
         </form>
     </div>
