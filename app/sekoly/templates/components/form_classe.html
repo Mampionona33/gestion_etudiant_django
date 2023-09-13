@@ -11,19 +11,17 @@
 			<input type="hidden" name="next" value="{{ next }}"/>
 		{% endif %}
 		<div class="form-group row">
-			<label class="col-sm-2 col-form-label h5 text-capitalize" for="libelle">libelle:
-			</label>
+			<label class="col-sm-2 col-form-label h5 text-capitalize" for="libelle">libelle:</label>
 			<div class="col-sm-4">
-				<input class="form-control" type="text" name="libelle" id="libelle" required>
+				<input class="form-control" type="text" {% if selected_classe %} value="{{ selected_classe.libelle }}" {% endif %} name="libelle" id="libelle" required>
 			</div>
 		</div>
 		<div class="form-group row">
-			<label class="h5 col-sm-2 col-form-label text-capitalize" for="filiere">Filière:
-			</label>
+			<label class="h5 col-sm-2 col-form-label text-capitalize" for="filiere">Filière:</label>
 			<div class="col-sm-4">
 				<select class="form-control" name="filiere" id="filiere">
 					{% for filier in filieres %}
-						<option value="{{filier.idFiliere}}">{{filier.libelle}}</option>
+						<option value="{{filier.idFiliere}}" {% if selected_classe and selected_classe.filiere == filier %} selected {% endif %}>{{filier.libelle}}</option>
 					{% endfor %}
 				</select>
 			</div>
@@ -33,7 +31,7 @@
 			<div class="col-sm-4">
 				<select class="form-control" name="niveau" id="niveau">
 					{% for niveau in niveaux %}
-						<option value="{{niveau.idNiveau}}">{{niveau}}</option>
+						<option value="{{niveau.idNiveau}}" {% if selected_classe and selected_classe.niveau == niveau %} selected {% endif %}>{{niveau}}</option>
 					{% endfor %}
 				</select>
 			</div>

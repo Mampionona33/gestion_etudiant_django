@@ -8,6 +8,8 @@ from django.contrib.sessions.models import Session
 from django.contrib.contenttypes.models import ContentType
 from django.apps import apps
 from django.http import HttpResponse
+# Importez la fonction get_object_or_404
+from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
 excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]
@@ -107,12 +109,10 @@ def classe_add(request):
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def classe_detail(request, idClasse):
-    selected_classe = Classe.objects.filter(idClasse=idClasse).first()
+    # Utilisez get_object_or_404 pour obtenir l'objet Classe ou renvoyer une 404 si elle n'existe pas
+    selected_classe = get_object_or_404(Classe, idClasse=idClasse)
     sidebar_items = sidebar_contents()
     filieres = Filiere.objects.all()
     niveaux = Niveau.objects.all()
 
-    if selected_classe:
-        return render(request, "sekoly/classe_detail.html", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe, 'filieres': filieres, 'niveaux': niveaux})
-    else:
-        return HttpResponse("Cette classe n'éxiste pas")
+    return render(request, "sekoly/classe_detail.html", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe, 'filieres': filieres, 'niveaux': niveaux})
