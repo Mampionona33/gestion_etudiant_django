@@ -14,8 +14,10 @@ excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]
 
 def sidebar_contents():
     excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]
-    admin_models = [model for model in apps.get_models() if model not in excluded_models]
-    model_names_plural = [model._meta.verbose_name_plural for model in admin_models]
+    admin_models = [model for model in apps.get_models()
+                    if model not in excluded_models]
+    model_names_plural = [
+        model._meta.verbose_name_plural for model in admin_models]
     return model_names_plural
 
 
@@ -31,8 +33,8 @@ def is_etudiant(user):
 @user_passes_test(is_responsable, login_url='login')
 def index_responsable(request):
     sidebar_items = sidebar_contents()
-    classes = Classe.objects.all();
-    return render(request, "sekoly/index_responsable.html", {'model_names_plural': sidebar_items,'classes':classes})
+    classes = Classe.objects.all()
+    return render(request, "sekoly/index_responsable.html", {'model_names_plural': sidebar_items, 'classes': classes})
 
 
 @login_required(login_url='login')
@@ -59,38 +61,44 @@ def index(request):
     # Si l'utilisateur n'est pas connecté ou la connexion a échoué, redirigez-le vers la page de connexion
     return redirect("login")
 
+
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def list_etudiants(request):
     etudiants = Etudiant.objects.all()
     sidebar_items = sidebar_contents()
-    return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants, 'model_names_plural':sidebar_items})
+    return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants, 'model_names_plural': sidebar_items})
 
 
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def classe_add(request):
+    # Vous pouvez garder sidebar_contents() s'il s'agit d'une fonction correctement définie
     sidebar_items = sidebar_contents()
     filieres = Filiere.objects.all()
     niveaux = Niveau.objects.all()
 
     if request.method == 'POST':
-        libelle = request.POST['libelle']
-        filiere_id = request.POST['filiere']
-        niveau_id = request.POST['niveau']
-        
-        filiere = Filiere.objects.get(pk=filiere_id)
-        niveau = Niveau.objects.get(pk=niveau_id)
+        libelle = request.POST.get('libelle', '')
+        filiere_id = request.POST.get('filiere', '')
+        niveau_id = request.POST.get('niveau', '')
+
+        # Vérifiez si les valeurs de filiere_id et niveau_id sont valides
+        try:
+            filiere = Filiere.objects.get(pk=filiere_id)
+            niveau = Niveau.objects.get(pk=niveau_id)
+        except (Filiere.DoesNotExist, Niveau.DoesNotExist, ValueError):
+            request.session['error_message'] = 'Filière ou niveau invalide.'
+            return redirect('index_responsable')
 
         existing_classe = Classe.objects.filter(libelle=libelle).first()
-        
+
         if existing_classe:
             request.session['error_message'] = 'Une classe avec ce libellé existe déjà.'
+        else:
+            nouvelle_classe = Classe(
+                libelle=libelle, filiere=filiere, niveau=niveau)
+            nouvelle_classe.save()
             return redirect('index_responsable')
-        
-        nouvelle_classe = Classe(libelle=libelle, filiere=filiere, niveau=niveau)
-        nouvelle_classe.save()
-
-        return redirect('index_responsable')  
 
     return render(request, "sekoly/classe_add.html", {'model_names_plural': sidebar_items, 'filieres': filieres, 'niveaux': niveaux})
