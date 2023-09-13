@@ -30,7 +30,7 @@ def index_responsable(request):
     model_names_plural = [
         model._meta.verbose_name_plural for model in admin_models
     ]
-    return render(request, "sekoly/index_responsable.html", {'model_names_plural': model_names_plural})
+    return render(request, "sekoly/index_responsable.html", {'model_names_plural': model_names_plural, 'user':request.user})
 
 
 @login_required(login_url='login')
