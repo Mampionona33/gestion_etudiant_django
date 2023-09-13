@@ -1,22 +1,28 @@
 {% extends "../base.html" %}
 
 {% block content %}
-	<div class="container p-3">
-		<table class="table table-striped table-hover">
+	<div class="container p-3 d-flex flex-column gap-3">
+		<div>
+			<button class="btn btn-primary d-flex" >Ajout classe
+				<span class="material-icons-outlined">
+					add
+				</span>
+			</button>
+		</div>
+		<table class="table">
 			<thead>
 				<tr>
-					<th>Tableau de bord</th>
+					<th>List des classes</th>
 				</tr>
 			</thead>
 			<tbody>
-				{% for model_name_plural in model_names_plural %}
-					<tr>
-						<td class="text-capitalize">
-							<a class="text-decoration-none" href="{% url model_name_plural %}">{{ model_name_plural }}</a>
+				<tr>
+					{% for class in classes %}
+						<td>
+							{{class}}
 						</td>
-					</tr>
-				{% endfor %}
-
+					{% endfor %}
+				</tr>
 			</tbody>
 		</table>
 	</div>
