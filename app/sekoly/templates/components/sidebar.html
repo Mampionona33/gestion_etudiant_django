@@ -1,0 +1,9 @@
+<div class="d-flex position-sticky float-start">
+    <ul class="list-group">
+        {% for model_name_plural in model_names_plural %}
+            <li class="text-capitalize list-group-item list-group-item-action">
+                <a class="text-decoration-none" href="{% url model_name_plural %}">{{ model_name_plural }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

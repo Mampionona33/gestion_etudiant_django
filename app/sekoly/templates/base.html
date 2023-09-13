@@ -14,8 +14,12 @@
 			{% include "./components/navbar.html" %}
 		{% endif %}
 		<main>
+			{% if user.is_authenticated %}
+				{% include "./components/sidebar.html" %}
+			{% endif %}
+
 			{% block content %}{% endblock %}
 		</main>
-		{% block modal %}{% endblock %}
+			{% block modal %}{% endblock %}
 	</body>
 </html>

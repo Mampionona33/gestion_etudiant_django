@@ -57,8 +57,15 @@ def index(request):
     # Si l'utilisateur n'est pas connecté ou la connexion a échoué, redirigez-le vers la page de connexion
     return redirect("login")
 
-
+@login_required(login_url='login')
+@user_passes_test(is_responsable, login_url='login')
 def list_etudiants(request):
     etudiants = Etudiant.objects.all()
-    print(etudiants)
-    return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants})
+    admin_models = [
+        model for model in apps.get_models() if model not in excluded_models
+    ]
+    model_names_plural = [
+        model._meta.verbose_name_plural for model in admin_models
+    ]
+    return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants, 'model_names_plural':model_names_plural})
+
