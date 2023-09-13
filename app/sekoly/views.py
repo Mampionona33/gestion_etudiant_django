@@ -70,3 +70,5 @@ def list_etudiants(request):
     ]
     return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants, 'model_names_plural':model_names_plural})
 
+def classe_add(request):
+    return render(request, "test");

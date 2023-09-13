@@ -2,12 +2,12 @@
 
 {% block content %}
 	<div class="container p-3 d-flex flex-column gap-3">
-		<div>
-			<button class="btn btn-primary d-flex" >Ajout classe
+		<div class="d-flex">
+			<a class="btn btn-primary d-flex" href="{% url 'classes add' %}">Ajout classe
 				<span class="material-icons-outlined">
-					add
+				add
 				</span>
-			</button>
+			</a>
 		</div>
 		<table class="table table-sm table-responsive">
 			<thead>
