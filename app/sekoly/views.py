@@ -12,6 +12,13 @@ from django.apps import apps
 excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]
 
 
+def sidebar_contents():
+    excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]
+    admin_models = [model for model in apps.get_models() if model not in excluded_models]
+    model_names_plural = [model._meta.verbose_name_plural for model in admin_models]
+    return model_names_plural
+
+
 def is_responsable(user):
     return user.groups.filter(name='responsable').exists()
 
@@ -23,15 +30,9 @@ def is_etudiant(user):
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def index_responsable(request):
-    # Récupérez la liste de tous les modèles enregistrés dans l'administration
-    admin_models = [
-        model for model in apps.get_models() if model not in excluded_models
-    ]
-    model_names_plural = [
-        model._meta.verbose_name_plural for model in admin_models
-    ]
+    sidebar_items = sidebar_contents()
     classes = Classe.objects.all();
-    return render(request, "sekoly/index_responsable.html", {'model_names_plural': model_names_plural,'classes':classes})
+    return render(request, "sekoly/index_responsable.html", {'model_names_plural': sidebar_items,'classes':classes})
 
 
 @login_required(login_url='login')
@@ -62,13 +63,10 @@ def index(request):
 @user_passes_test(is_responsable, login_url='login')
 def list_etudiants(request):
     etudiants = Etudiant.objects.all()
-    admin_models = [
-        model for model in apps.get_models() if model not in excluded_models
-    ]
-    model_names_plural = [
-        model._meta.verbose_name_plural for model in admin_models
-    ]
-    return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants, 'model_names_plural':model_names_plural})
+    sidebar_items = sidebar_contents()
+    return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants, 'model_names_plural':sidebar_items})
+
 
 def classe_add(request):
-    return render(request, "test");
+    sidebar_items = sidebar_contents()
+    return render(request, "sekoly/classe_add.html",{'model_names_plural':sidebar_items});
