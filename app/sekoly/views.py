@@ -109,8 +109,10 @@ def classe_add(request):
 def classe_detail(request, idClasse):
     selected_classe = Classe.objects.filter(idClasse=idClasse).first()
     sidebar_items = sidebar_contents()
+    filieres = Filiere.objects.all()
+    niveaux = Niveau.objects.all()
 
     if selected_classe:
-        return render(request, "sekoly/classe_detail.html", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe})
+        return render(request, "sekoly/classe_detail.html", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe, 'filieres': filieres, 'niveaux': niveaux})
     else:
         return HttpResponse("Cette classe n'éxiste pas")
