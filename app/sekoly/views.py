@@ -79,11 +79,15 @@ def classe_add(request):
         filiere_id = request.POST['filiere']
         niveau_id = request.POST['niveau']
         
-        # Récupérez les instances de Filiere et Niveau en fonction de leurs identifiants
         filiere = Filiere.objects.get(pk=filiere_id)
         niveau = Niveau.objects.get(pk=niveau_id)
+
+        existing_classe = Classe.objects.filter(libelle=libelle).first()
         
-        # Créez une nouvelle instance de Classe en utilisant les données du formulaire
+        if existing_classe:
+            request.session['error_message'] = 'Une classe avec ce libellé existe déjà.'
+            return redirect('index_responsable')
+        
         nouvelle_classe = Classe(libelle=libelle, filiere=filiere, niveau=niveau)
         nouvelle_classe.save()
 
