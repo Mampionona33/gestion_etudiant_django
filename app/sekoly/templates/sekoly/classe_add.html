@@ -19,7 +19,7 @@
                 <div class="col-sm-4">
                     <select class="form-control" name="filiere" id="filiere" >
                         {% for filier in filieres %}
-                        <option value="{{filier}}">{{filier}}</option>
+                        <option value="{{filier.idFiliere}}">{{filier.libelle}}</option> <!-- Utilisez filier.id au lieu de filier -->
                         {% endfor %}
                     </select>
                 </div>
@@ -29,7 +29,7 @@
                 <div class="col-sm-4">
                     <select class="form-control" name="niveau" id="niveau" >
                         {% for niveau in niveaux %}
-                        <option value="{{niveau}}">{{niveau}}</option>
+                        <option value="{{niveau.idNiveau}}">{{niveau}}</option>
                         {% endfor %}
                     </select>
                 </div>

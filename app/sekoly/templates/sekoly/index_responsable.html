@@ -16,13 +16,13 @@
 				</tr>
 			</thead>
 			<tbody>
+				{% for class in classes %}
 				<tr>
-					{% for class in classes %}
-						<td>
-							{{class}}
-						</td>
-					{% endfor %}
+					<td>
+						{{class}}
+					</td>
 				</tr>
+				{% endfor %}
 			</tbody>
 		</table>
 	</div>

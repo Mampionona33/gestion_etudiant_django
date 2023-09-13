@@ -67,8 +67,26 @@ def list_etudiants(request):
     return render(request, "sekoly/list_etudiants.html", {'list_etudiants': etudiants, 'model_names_plural':sidebar_items})
 
 
+@login_required(login_url='login')
+@user_passes_test(is_responsable, login_url='login')
 def classe_add(request):
     sidebar_items = sidebar_contents()
     filieres = Filiere.objects.all()
-    niveaux= Niveau.objects.all()
-    return render(request, "sekoly/classe_add.html",{'model_names_plural':sidebar_items,"filieres":filieres,'niveaux':niveaux});
+    niveaux = Niveau.objects.all()
+
+    if request.method == 'POST':
+        libelle = request.POST['libelle']
+        filiere_id = request.POST['filiere']
+        niveau_id = request.POST['niveau']
+        
+        # Récupérez les instances de Filiere et Niveau en fonction de leurs identifiants
+        filiere = Filiere.objects.get(pk=filiere_id)
+        niveau = Niveau.objects.get(pk=niveau_id)
+        
+        # Créez une nouvelle instance de Classe en utilisant les données du formulaire
+        nouvelle_classe = Classe(libelle=libelle, filiere=filiere, niveau=niveau)
+        nouvelle_classe.save()
+
+        return redirect('index_responsable')  
+
+    return render(request, "sekoly/classe_add.html", {'model_names_plural': sidebar_items, 'filieres': filieres, 'niveaux': niveaux})
