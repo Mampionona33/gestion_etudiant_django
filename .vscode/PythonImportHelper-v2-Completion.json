@@ -1,0 +1,700 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "apps",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "Group",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "Permission",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "user_passes_test",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "LogEntry",
+        "importPath": "django.contrib.admin.models",
+        "description": "django.contrib.admin.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.admin.models",
+        "documentation": {}
+    },
+    {
+        "label": "Session",
+        "importPath": "django.contrib.sessions.models",
+        "description": "django.contrib.sessions.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.sessions.models",
+        "documentation": {}
+    },
+    {
+        "label": "ContentType",
+        "importPath": "django.contrib.contenttypes.models",
+        "description": "django.contrib.contenttypes.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.contenttypes.models",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "app.app.asgi",
+        "description": "app.app.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "app.app.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-h6x&3n53)fj002a%eb(kq(lr(1dopef5wz*wb6_i)djmcs644k'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"localhost\",\n                 \"65tfy8-8000.fc-eu-0.pitcher.csb.app\", \"127.0.0.1\"]\nCORS_ALLOW_ALL_ORIGINS = True",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-h6x&3n53)fj002a%eb(kq(lr(1dopef5wz*wb6_i)djmcs644k'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = [\"localhost\",\n                 \"65tfy8-8000.fc-eu-0.pitcher.csb.app\", \"127.0.0.1\"]\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://65tfy8-8000.csb.app\",\n]\nLOGIN_REDIRECT_URL = '/'",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [\"localhost\",\n                 \"65tfy8-8000.fc-eu-0.pitcher.csb.app\", \"127.0.0.1\"]\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://65tfy8-8000.csb.app\",\n]\nLOGIN_REDIRECT_URL = '/'\nLOGIN_URL = '/login/'\n# Application definition",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "ALLOWED_HOSTS = [\"localhost\",\n                 \"65tfy8-8000.fc-eu-0.pitcher.csb.app\", \"127.0.0.1\"]\nCORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://65tfy8-8000.csb.app\",\n]\nLOGIN_REDIRECT_URL = '/'\nLOGIN_URL = '/login/'\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOW_ALL_ORIGINS",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "CORS_ALLOW_ALL_ORIGINS = True\nCSRF_TRUSTED_ORIGINS = [\n    \"https://65tfy8-8000.csb.app\",\n]\nLOGIN_REDIRECT_URL = '/'\nLOGIN_URL = '/login/'\n# Application definition\nINSTALLED_APPS = [\n    'sekoly.apps.SekolyConfig',\n    'django.contrib.admin',",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CSRF_TRUSTED_ORIGINS",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "CSRF_TRUSTED_ORIGINS = [\n    \"https://65tfy8-8000.csb.app\",\n]\nLOGIN_REDIRECT_URL = '/'\nLOGIN_URL = '/login/'\n# Application definition\nINSTALLED_APPS = [\n    'sekoly.apps.SekolyConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_REDIRECT_URL",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "LOGIN_REDIRECT_URL = '/'\nLOGIN_URL = '/login/'\n# Application definition\nINSTALLED_APPS = [\n    'sekoly.apps.SekolyConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_URL",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "LOGIN_URL = '/login/'\n# Application definition\nINSTALLED_APPS = [\n    'sekoly.apps.SekolyConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'sekoly.apps.SekolyConfig',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n]\nMIDDLEWARE = [",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'app.urls'",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "ROOT_URLCONF = 'app.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'app.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Default primary key field type",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATICFILES_DIRS",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "STATICFILES_DIRS = [\n    BASE_DIR / 'static',\n]\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "app.app.settings",
+        "description": "app.app.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "app.app.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "app.app.urls",
+        "description": "app.app.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path(\"\", include(\"sekoly.urls\")),\n    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),\n    # path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('accounts/logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),\n    path('accounts/password_change/', auth_views.PasswordChangeView.as_view(), name='password_change'),\n    path('accounts/password_change/done/', auth_views.PasswordChangeDoneView.as_view(), name='password_change_done'),\n    path('accounts/password_reset/', auth_views.PasswordResetView.as_view(), name='password_reset'),\n    path('accounts/password_reset/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),",
+        "detail": "app.app.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "app.app.wsgi",
+        "description": "app.app.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "app.app.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "app.sekoly.migrations.0001_initial",
+        "description": "app.sekoly.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Classe',\n            fields=[\n                ('idClasse', models.AutoField(primary_key=True, serialize=False)),",
+        "detail": "app.sekoly.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "SekolyConfig",
+        "kind": 6,
+        "importPath": "app.sekoly.apps",
+        "description": "app.sekoly.apps",
+        "peekOfCode": "class SekolyConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'sekoly'",
+        "detail": "app.sekoly.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Etudiant",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class Etudiant(models.Model):\n    idEtudiant = models.AutoField(primary_key=True, default=1)\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    nom = models.CharField(max_length=255)\n    prenom = models.CharField(max_length=255)\n    dateDeNaissance = models.DateField()\n    classe = models.ForeignKey('Classe', on_delete=models.CASCADE)\n    def __str__(self):\n        return f\"{self.nom} {self.prenom}\"\nclass Classe(models.Model):",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "Classe",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class Classe(models.Model):\n    idClasse = models.AutoField(primary_key=True)\n    libelle = models.CharField(max_length=255)\n    filiere = models.ForeignKey('Filiere', on_delete=models.CASCADE)\n    niveau = models.ForeignKey('Niveau', on_delete=models.CASCADE)\n    def __str__(self):\n        return self.libelle\nclass ClasseMatiere(models.Model):\n    idClasseMatiere = models.AutoField(primary_key=True)\n    classe = models.ForeignKey('Classe', on_delete=models.CASCADE)",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "ClasseMatiere",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class ClasseMatiere(models.Model):\n    idClasseMatiere = models.AutoField(primary_key=True)\n    classe = models.ForeignKey('Classe', on_delete=models.CASCADE)\n    matiere = models.ForeignKey('Matiere', on_delete=models.CASCADE)\n    def __str__(self):\n        return f\"{self.classe} / {self.matiere}\"\nclass Filiere(models.Model):\n    idFiliere = models.AutoField(primary_key=True)\n    libelle = models.CharField(max_length=255)\n    def __str__(self):",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "Filiere",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class Filiere(models.Model):\n    idFiliere = models.AutoField(primary_key=True)\n    libelle = models.CharField(max_length=255)\n    def __str__(self):\n        return self.libelle\nclass Niveau(models.Model):\n    idNiveau = models.AutoField(primary_key=True)\n    libelle = models.CharField(max_length=255)\n    def __str__(self):\n        return self.libelle",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "Niveau",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class Niveau(models.Model):\n    idNiveau = models.AutoField(primary_key=True)\n    libelle = models.CharField(max_length=255)\n    def __str__(self):\n        return self.libelle\nclass Matiere(models.Model):\n    idMatiere = models.AutoField(primary_key=True)\n    libelle = models.CharField(max_length=255)\n    def __str__(self):\n        return self.libelle",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "Matiere",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class Matiere(models.Model):\n    idMatiere = models.AutoField(primary_key=True)\n    libelle = models.CharField(max_length=255)\n    def __str__(self):\n        return self.libelle\nclass Coeff(models.Model):\n    idCoeff = models.AutoField(primary_key=True)\n    valeur = models.FloatField()\n    def __str__(self):\n        return str(self.valeur)",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "Coeff",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class Coeff(models.Model):\n    idCoeff = models.AutoField(primary_key=True)\n    valeur = models.FloatField()\n    def __str__(self):\n        return str(self.valeur)\nclass CoeffMatiereFiliere(models.Model):\n    idCoeffMatiereFiliere = models.AutoField(primary_key=True)\n    coefficient = models.ForeignKey('Coeff', on_delete=models.CASCADE)\n    matiere = models.ForeignKey('Matiere', on_delete=models.CASCADE)\n    filiere = models.ForeignKey('Filiere', on_delete=models.CASCADE)",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "CoeffMatiereFiliere",
+        "kind": 6,
+        "importPath": "app.sekoly.models",
+        "description": "app.sekoly.models",
+        "peekOfCode": "class CoeffMatiereFiliere(models.Model):\n    idCoeffMatiereFiliere = models.AutoField(primary_key=True)\n    coefficient = models.ForeignKey('Coeff', on_delete=models.CASCADE)\n    matiere = models.ForeignKey('Matiere', on_delete=models.CASCADE)\n    filiere = models.ForeignKey('Filiere', on_delete=models.CASCADE)\n    def __str__(self):\n        return f\"{self.coefficient} / {self.matiere} / {self.filiere}\"",
+        "detail": "app.sekoly.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "app.sekoly.urls",
+        "description": "app.sekoly.urls",
+        "peekOfCode": "urlpatterns = [\n    path(\"responsable/etudiants/\", views.list_etudiants, name='etudiants'),\n    path(\"responsable/classes/add\", views.classe_add, name='classes add'),\n    path(\"responsable/classes/\", views.index_responsable, name='classes'),\n    path(\"responsable/classes/<int:idClasse>/\",\n         views.classe_detail, name='detail'),\n    path(\"responsable/filieres/\", views.list_etudiants, name='filieres'),\n    path(\"responsable/niveaus/\", views.list_etudiants, name='niveaus'),\n    path(\"responsable/matieres/\", views.list_etudiants, name='matieres'),\n    path(\"responsable/coeffs/\", views.list_etudiants, name='coeffs'),",
+        "detail": "app.sekoly.urls",
+        "documentation": {}
+    },
+    {
+        "label": "sidebar_contents",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def sidebar_contents():\n    excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]\n    admin_models = [model for model in apps.get_models()\n                    if model not in excluded_models]\n    model_names_plural = [\n        model._meta.verbose_name_plural for model in admin_models]\n    return model_names_plural\ndef is_responsable(user):\n    return user.groups.filter(name='responsable').exists()\ndef is_etudiant(user):",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "is_responsable",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def is_responsable(user):\n    return user.groups.filter(name='responsable').exists()\ndef is_etudiant(user):\n    return user.groups.filter(name='etudiant').exists()\n@login_required(login_url='login')\n@user_passes_test(is_responsable, login_url='login')\ndef index_responsable(request):\n    sidebar_items = sidebar_contents()\n    classes = Classe.objects.all()\n    return render(request, \"sekoly/index_responsable.html\", {'model_names_plural': sidebar_items, 'classes': classes})",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "is_etudiant",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def is_etudiant(user):\n    return user.groups.filter(name='etudiant').exists()\n@login_required(login_url='login')\n@user_passes_test(is_responsable, login_url='login')\ndef index_responsable(request):\n    sidebar_items = sidebar_contents()\n    classes = Classe.objects.all()\n    return render(request, \"sekoly/index_responsable.html\", {'model_names_plural': sidebar_items, 'classes': classes})\n@login_required(login_url='login')\n@user_passes_test(is_etudiant, login_url='login')",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "index_responsable",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def index_responsable(request):\n    sidebar_items = sidebar_contents()\n    classes = Classe.objects.all()\n    return render(request, \"sekoly/index_responsable.html\", {'model_names_plural': sidebar_items, 'classes': classes})\n@login_required(login_url='login')\n@user_passes_test(is_etudiant, login_url='login')\ndef index_etudiant(request):\n    return render(request, \"sekoly/index_etudiant.html\")\ndef index(request):\n    if request.method == \"POST\":",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "index_etudiant",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def index_etudiant(request):\n    return render(request, \"sekoly/index_etudiant.html\")\ndef index(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None and user.is_authenticated:\n            login(request, user)\n            groups = user.groups.all()",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def index(request):\n    if request.method == \"POST\":\n        username = request.POST[\"username\"]\n        password = request.POST[\"password\"]\n        user = authenticate(request, username=username, password=password)\n        if user is not None and user.is_authenticated:\n            login(request, user)\n            groups = user.groups.all()\n            print(groups)\n            if groups.filter(name='etudiant').exists():",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "list_etudiants",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def list_etudiants(request):\n    etudiants = Etudiant.objects.all()\n    sidebar_items = sidebar_contents()\n    return render(request, \"sekoly/list_etudiants.html\", {'list_etudiants': etudiants, 'model_names_plural': sidebar_items})\n@login_required(login_url='login')\n@user_passes_test(is_responsable, login_url='login')\ndef classe_add(request):\n    sidebar_items = sidebar_contents()\n    filieres = Filiere.objects.all()\n    niveaux = Niveau.objects.all()",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "classe_add",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def classe_add(request):\n    sidebar_items = sidebar_contents()\n    filieres = Filiere.objects.all()\n    niveaux = Niveau.objects.all()\n    if request.method == 'POST':\n        libelle = request.POST.get('libelle', '')\n        filiere_id = request.POST.get('filiere', '')\n        niveau_id = request.POST.get('niveau', '')\n        # Vérifiez si les valeurs de filiere_id et niveau_id sont valides\n        try:",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "classe_detail",
+        "kind": 2,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "def classe_detail(request, idClasse):\n    selected_classe = Classe.objects.filter(idClasse=idClasse).first()\n    sidebar_items = sidebar_contents()\n    if selected_classe:\n        return render(request, \"sekoly/classe_detail.html\", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe})\n    else:\n        return HttpResponse('index_responsable')",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "excluded_models",
+        "kind": 5,
+        "importPath": "app.sekoly.views",
+        "description": "app.sekoly.views",
+        "peekOfCode": "excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]\ndef sidebar_contents():\n    excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]\n    admin_models = [model for model in apps.get_models()\n                    if model not in excluded_models]\n    model_names_plural = [\n        model._meta.verbose_name_plural for model in admin_models]\n    return model_names_plural\ndef is_responsable(user):\n    return user.groups.filter(name='responsable').exists()",
+        "detail": "app.sekoly.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "app.manage",
+        "description": "app.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'app.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "app.manage",
+        "documentation": {}
+    }
+]

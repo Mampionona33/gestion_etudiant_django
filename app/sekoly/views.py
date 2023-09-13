@@ -7,6 +7,7 @@ from django.contrib.admin.models import LogEntry
 from django.contrib.sessions.models import Session
 from django.contrib.contenttypes.models import ContentType
 from django.apps import apps
+from django.http import HttpResponse
 
 # Create your views here.
 excluded_models = [Group, User, LogEntry, Session, Permission, ContentType]
@@ -73,7 +74,6 @@ def list_etudiants(request):
 @login_required(login_url='login')
 @user_passes_test(is_responsable, login_url='login')
 def classe_add(request):
-    # Vous pouvez garder sidebar_contents() s'il s'agit d'une fonction correctement définie
     sidebar_items = sidebar_contents()
     filieres = Filiere.objects.all()
     niveaux = Niveau.objects.all()
@@ -102,3 +102,15 @@ def classe_add(request):
             return redirect('index_responsable')
 
     return render(request, "sekoly/classe_add.html", {'model_names_plural': sidebar_items, 'filieres': filieres, 'niveaux': niveaux})
+
+
+@login_required(login_url='login')
+@user_passes_test(is_responsable, login_url='login')
+def classe_detail(request, idClasse):
+    selected_classe = Classe.objects.filter(idClasse=idClasse).first()
+    sidebar_items = sidebar_contents()
+
+    if selected_classe:
+        return render(request, "sekoly/classe_detail.html", {'model_names_plural': sidebar_items, 'selected_classe': selected_classe})
+    else:
+        return HttpResponse("Cette classe n'éxiste pas")
