@@ -2,6 +2,23 @@
 
 {% block content %}
     <div class="container">
-        <h1 class="text-capitalize" >ajout classe</h1>
+        <h3 class="text-capitalize" >ajout classe</h3>
+        <form action="" class=" ">
+            <div class="form-group">
+                <label class="h5" for="libelle">libelle: </label>
+                <input class="form-control" type="text" name="libelle" id="libelle">
+            </div>
+            <div class="form-group">
+                <label class="h5" for="filiere">Filière: </label>
+                <select class="form-control" name="filiere" id="filiere" >
+                    {% for filier in filieres %}
+                    <option value="{{filier}}">{{filier}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="h5" for="niveau">niveau</label>
+            </div>
+        </form>
     </div>
 {% endblock %}

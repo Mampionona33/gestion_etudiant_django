@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import user_passes_test, login_required
-from .models import Classe, Etudiant
+from .models import Classe, Etudiant, Filiere
 from django.contrib.auth.models import Group, User, Permission
 from django.contrib.admin.models import LogEntry
 from django.contrib.sessions.models import Session
@@ -69,4 +69,5 @@ def list_etudiants(request):
 
 def classe_add(request):
     sidebar_items = sidebar_contents()
-    return render(request, "sekoly/classe_add.html",{'model_names_plural':sidebar_items});
+    filieres = Filiere.objects.all()
+    return render(request, "sekoly/classe_add.html",{'model_names_plural':sidebar_items,"filieres":filieres});
