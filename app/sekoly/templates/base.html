@@ -16,9 +16,13 @@
 		<main class="d-flex">
 			{% if user.is_authenticated %}
 				{% include "./components/sidebar.html" %}
-			{% endif %}
-			{% block content %}{% endblock %}
-		</main>
+				{% endif %}
+				{% block content %}{% endblock %}
+			</main>
 			{% block modal %}{% endblock %}
-	</body>
+			{% if error_message %}
+				<div id="error-message" data-error-message="{{ error_message|escapejs }}"></div>
+			{% endif %}
+
+		</body>
 </html>

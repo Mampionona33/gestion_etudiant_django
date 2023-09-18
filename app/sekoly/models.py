@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 # Create your models here.
 
 
@@ -23,6 +24,12 @@ class Classe(models.Model):
 
     def __str__(self):
         return self.libelle
+
+    def clean(self):
+        # Vérifier si une classe avec le même libellé existe déjà (à l'exception de la classe actuelle)
+        existing_classe = Classe.objects.exclude(idClasse=self.idClasse).filter(libelle=self.libelle).first()
+        if existing_classe:
+            raise ValidationError({'libelle': 'Une classe avec ce libellé existe déjà.'})
 
 
 class ClasseMatiere(models.Model):
