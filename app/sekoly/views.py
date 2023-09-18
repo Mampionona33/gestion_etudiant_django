@@ -107,8 +107,9 @@ def classe_add(request):
 
                 # Utilisation de la fonction messages pour ajouter un message d'information
                 messages.info(request, 'La classe a bien été créée.')
-                return HttpResponse(messages)
-                # return redirect('index_responsable')
+
+                # Redirigez vers la vue appropriée
+                return redirect('index_responsable')
 
     return render(request, "sekoly/classe_add.html", {'model_names_plural': sidebar_items,
                                                       'filieres': filieres, 'niveaux': niveaux,
@@ -163,3 +164,14 @@ def classe_update(request, idClasse):
         'form': form,
         'error_message': error_message
     })
+
+
+@login_required(login_url='login')
+@user_passes_test(is_responsable, login_url='login')
+def classe_delete(request, idClasse):
+    selected_classe = get_object_or_404(Classe, idClasse=idClasse)
+    info_message = None
+
+    selected_classe.delete()
+
+    return redirect('classes')

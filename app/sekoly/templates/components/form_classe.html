@@ -39,7 +39,7 @@
 			<div class="d-flex justify-content-start gap-3">
 				<input class="btn btn-primary" type="submit" value="enregistrer">
 				{% if selected_classe %}
-					<input class="btn btn-danger" type="button" value="supprimer">
+					<a href="{% url 'classe delete' selected_classe.idClasse %}"><button class="btn btn-danger" type="button">supprimer</button></a>
 				{% endif %}
 			</div>
 		</form>
