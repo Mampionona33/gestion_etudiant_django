@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container p-3">
 	{% if selected_classe %}
 		<h3 class="text-capitalize">modifier classe</h3>
 		<form action="{% url 'classes update' selected_classe.idClasse %}" method="POST" class="d-flex flex-column gap-2">
