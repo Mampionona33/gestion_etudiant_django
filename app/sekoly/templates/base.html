@@ -16,13 +16,17 @@
 		<main class="d-flex">
 			{% if user.is_authenticated %}
 				{% include "./components/sidebar.html" %}
-				{% endif %}
-				{% block content %}{% endblock %}
-			</main>
-			{% block modal %}{% endblock %}
-			{% if error_message %}
-				<div id="error-message" data-error-message="{{ error_message|escapejs }}"></div>
 			{% endif %}
+			{% block content %}{% endblock %}
+		</main>
+		{% block modal %}{% endblock %}
+		{% if error_message %}
+			<div id="error-message" data-error-message="{{ error_message|escapejs }}"></div>
+		{% endif %}
+		{% if message.info %}
+			<div id="message-info" data-message-info="{{ message.info|escapejs }}"></div>
+		{% endif %}
 
-		</body>
+
+	</body>
 </html>
