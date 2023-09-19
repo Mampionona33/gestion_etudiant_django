@@ -1,46 +1,58 @@
 <div class="container p-3">
-	{% if selected_classe %}
-		<h3 class="text-capitalize">modifier classe</h3>
-		<form action="{% url 'classes update' selected_classe.idClasse %}" method="POST" class="d-flex flex-column gap-2">
-		{% else %}
-			<h3 class="text-capitalize">ajout classe</h3>
-			<form action="{% url 'classes add' %}" method="POST" class="d-flex flex-column gap-2">
-			{% endif %}
-			{% csrf_token %}
-			{% if next %}
-				<input type="hidden" name="next" value="{{ next }}"/>
-			{% endif %}
-			<div class="form-group row">
-				<label class="col-sm-2 col-form-label h5 text-capitalize" for="libelle">libelle:</label>
-				<div class="col-sm-4">
-					<input class="form-control" type="text" {% if selected_classe %} value="{{ selected_classe.libelle }}" {% endif %} name="libelle" id="libelle" required>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label class="h5 col-sm-2 col-form-label text-capitalize" for="filiere">Filière:</label>
-				<div class="col-sm-4">
-					<select class="form-control" name="filiere" id="filiere">
-						{% for filier in filieres %}
-							<option value="{{filier.idFiliere}}" {% if selected_classe and selected_classe.filiere == filier %} selected {% endif %}>{{filier.libelle}}</option>
-						{% endfor %}
-					</select>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label class="h5 col-sm-2 col-form-label text-capitalize" for="niveau">niveau</label>
-				<div class="col-sm-4">
-					<select class="form-control" name="niveau" id="niveau">
-						{% for niveau in niveaux %}
-							<option value="{{niveau.idNiveau}}" {% if selected_classe and selected_classe.niveau == niveau %} selected {% endif %}>{{niveau}}</option>
-						{% endfor %}
-					</select>
-				</div>
-			</div>
-			<div class="d-flex justify-content-start gap-3">
-				<input class="btn btn-primary" type="submit" value="enregistrer">
-				{% if selected_classe %}
-					<a href="{% url 'classe delete' selected_classe.idClasse %}"><button class="btn btn-danger" type="button">supprimer</button></a>
-				{% endif %}
-			</div>
-		</form>
-	</div>
+    {% if selected_classe %}
+        <h3 class="text-capitalize">Modifier classe</h3>
+    {% else %}
+        <h3 class="text-capitalize">Ajouter classe</h3>
+    {% endif %}
+    
+    {% if selected_classe %}
+        <div class="alert alert-warning" role="alert" id="alert-delete">
+            {# Êtes-vous sûr de vouloir supprimer cette classe ? #}
+            {# <form action="{% url 'classe delete' selected_classe.idClasse %}" method="POST" style="display: inline;"> #}
+                {# {% csrf_token %} #}
+                {# <button class="btn btn-danger" type="submit">Supprimer</button> #}
+            {# </form> #}
+            {# <a href="{% url 'classes' %}" class="btn btn-secondary">Annuler</a> #}
+        </div>
+    {% endif %}
+    
+    <form action="{% url 'classes update' selected_classe.idClasse %}" method="POST" class="d-flex flex-column gap-2">
+        {% csrf_token %}
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}"/>
+        {% endif %}
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label h5 text-capitalize" for="libelle">Libellé:</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" {% if selected_classe %} value="{{ selected_classe.libelle }}" {% endif %} name="libelle" id="libelle" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="h5 col-sm-2 col-form-label text-capitalize" for="filiere">Filière:</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="filiere" id="filiere">
+                    {% for filier in filieres %}
+                        <option value="{{filier.idFiliere}}" {% if selected_classe and selected_classe.filiere == filier %} selected {% endif %}>{{filier.libelle}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="h5 col-sm-2 col-form-label text-capitalize" for="niveau">Niveau</label>
+            <div class="col-sm-4">
+                <select class="form-control" name="niveau" id="niveau">
+                    {% for niveau in niveaux %}
+                        <option value="{{niveau.idNiveau}}" {% if selected_classe and selected_classe.niveau == niveau %} selected {% endif %}>{{niveau}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+        </div>
+        <div class="d-flex justify-content-start gap-3">
+            <input class="btn btn-primary" type="submit" value="Enregistrer">
+            {% if selected_classe %}
+                {# <a href="{% url 'classes' %}" class="btn btn-secondary">Annuler</a> #}
+				<button type="button" class="btn btn-danger" id="btn-delete{{selected_classe.idClasse}}">Supprimer</button>
+            {% endif %}
+        </div>
+    </form>
+</div>

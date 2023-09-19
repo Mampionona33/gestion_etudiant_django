@@ -1,6 +1,14 @@
 import "../styles/style.scss";
+import AlertHandler, { AlertType } from "./AlertHandler.ts";
 import ToastHandler, { ToastType } from "./ToastHandler.ts";
 import * as bootstrap from "bootstrap";
+
+const alertDelete = new AlertHandler(
+  "btn-delete11",
+  "delete",
+  "Êtes-vous sûr de vouloir supprimer cette classe",
+  AlertType.Danger
+);
 
 document.addEventListener("DOMContentLoaded", function () {
   // Récupérez la valeur de error_message de manière appropriée, par exemple en l'ajoutant comme attribut data dans un élément HTML
@@ -29,4 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
       toastHandleMessageInfo.render();
     }
   }
+
+  alertDelete.render();
 });
