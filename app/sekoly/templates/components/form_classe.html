@@ -6,17 +6,10 @@
     {% endif %}
     
     {% if selected_classe %}
-        <div class="alert alert-warning" role="alert" id="alert-delete">
-            {# Êtes-vous sûr de vouloir supprimer cette classe ? #}
-            {# <form action="{% url 'classe delete' selected_classe.idClasse %}" method="POST" style="display: inline;"> #}
-                {# {% csrf_token %} #}
-                {# <button class="btn btn-danger" type="submit">Supprimer</button> #}
-            {# </form> #}
-            {# <a href="{% url 'classes' %}" class="btn btn-secondary">Annuler</a> #}
-        </div>
+       <div id="alert-container"></div>
     {% endif %}
     
-    <form action="{% url 'classes update' selected_classe.idClasse %}" method="POST" class="d-flex flex-column gap-2">
+    <form action="{% if selected_classe %}{% url 'classes update' selected_classe.idClasse %}{% endif %}" method="POST" class="d-flex flex-column gap-2">
         {% csrf_token %}
         {% if next %}
             <input type="hidden" name="next" value="{{ next }}"/>
@@ -51,8 +44,36 @@
             <input class="btn btn-primary" type="submit" value="Enregistrer">
             {% if selected_classe %}
                 {# <a href="{% url 'classes' %}" class="btn btn-secondary">Annuler</a> #}
-				<button type="button" class="btn btn-danger" id="btn-delete{{selected_classe.idClasse}}">Supprimer</button>
+                <button type="button" class="btn btn-danger" id="btn-delete{{selected_classe.idClasse}}">Supprimer</button>
             {% endif %}
         </div>
     </form>
 </div>
+
+{% if selected_classe %}
+<script>
+    const alertContainer = document.getElementById('alert-container');
+    const appendAlert = (message, type) => {
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = `
+            <div class="alert alert-${type}" role="alert" id="alert-delete">
+                ${message}
+                <form action="{% url 'classe delete' selected_classe.idClasse %}" method="POST" style="display: inline;">
+                    {% csrf_token %}
+                    <button class="btn btn-danger" type="submit">Supprimer</button>
+                </form>
+                <a href="{% url 'detail' selected_classe.idClasse  %}" class="btn btn-secondary">Annuler</a>
+            </div>
+        `;
+        alertContainer.innerHTML = ''; 
+        alertContainer.append(wrapper);
+    };
+
+    const alertTrigger = document.getElementById('btn-delete{{selected_classe.idClasse}}');
+    if (alertTrigger) {
+        alertTrigger.addEventListener('click', () => {
+            appendAlert('Êtes-vous sûr de vouloir supprimer cette classe ?', 'warning');
+        });
+    }
+</script>
+{% endif %}
