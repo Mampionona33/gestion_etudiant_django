@@ -56,13 +56,15 @@
     const appendAlert = (message, type) => {
         const wrapper = document.createElement('div');
         wrapper.innerHTML = `
-            <div class="alert alert-${type}" role="alert" id="alert-delete">
+            <div class="alert d-flex flex-column alert-${type}" role="alert" id="alert-delete">
                 ${message}
-                <form action="{% url 'classe delete' selected_classe.idClasse %}" method="POST" style="display: inline;">
-                    {% csrf_token %}
-                    <button class="btn btn-danger" type="submit">Supprimer</button>
-                </form>
-                <a href="{% url 'detail' selected_classe.idClasse  %}" class="btn btn-secondary">Annuler</a>
+                <div class="d-flex gap-1">
+                    <form action="{% url 'classe delete' selected_classe.idClasse %}" method="POST" style="display: inline;">
+                        {% csrf_token %}
+                        <button class="btn btn-danger" type="submit">Supprimer</button>
+                    </form>
+                    <a href="{% url 'detail' selected_classe.idClasse  %}" class="btn btn-secondary">Annuler</a>
+                </div>
             </div>
         `;
         alertContainer.innerHTML = ''; 
