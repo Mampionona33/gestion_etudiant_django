@@ -43,7 +43,6 @@
         <div class="d-flex justify-content-start gap-3">
             <input class="btn btn-primary" type="submit" value="Enregistrer">
             {% if selected_classe %}
-                {# <a href="{% url 'classes' %}" class="btn btn-secondary">Annuler</a> #}
                 <button type="button" class="btn btn-danger" id="btn-delete{{selected_classe.idClasse}}">Supprimer</button>
             {% endif %}
         </div>
@@ -59,7 +58,7 @@
             <div class="alert d-flex flex-column alert-${type}" role="alert" id="alert-delete">
                 ${message}
                 <div class="d-flex gap-1">
-                    <form action="{% url 'classe delete' selected_classe.idClasse %}" method="POST" style="display: inline;">
+                    <form action="{% url 'classe delete' selected_classe.idClasse %}" method="DELETE" style="display: inline;">
                         {% csrf_token %}
                         <button class="btn btn-danger" type="submit">Supprimer</button>
                     </form>

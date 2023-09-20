@@ -1,20 +1,26 @@
-{% extends "../base.html" %}
-
-{% block content %}
-	<table>
-		<thead>
-			<tr>
-				<th>List étudiants</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for etudiant in list_etudiants %}
-				<tr>
-					<td>
-						<a href="">{{etudiant}}</a>
-					</td>
-				</tr>
-			{% endfor %}
-		</tbody>
-	</table>
+{% extends "../base.html" %} {% block content %}
+<div class="container p-3 d-flex flex-column gap-3">
+  <div class="d-flex">
+    <a class="btn btn-primary d-flex" href="{% url 'etudiants add' %}"
+      >Ajout etudiant
+      <span class="material-icons-outlined"> add </span>
+    </a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>List étudiants</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for etudiant in list_etudiants %}
+      <tr>
+        <td>
+          <a href="">{{etudiant}}</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 {% endblock %}

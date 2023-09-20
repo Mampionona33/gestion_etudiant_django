@@ -49,6 +49,13 @@ def index_etudiant(request):
     return render(request, "sekoly/index_etudiant.html")
 
 
+@login_required(login_url='login')
+@user_passes_test(is_responsable, login_url='login')
+def list_etudiants_add(request):
+    sidebar_items = sidebar_contents()
+    return render(request, "sekoly/list_etudiants_add.html", {'model_names_plural': sidebar_items})
+
+
 def index(request):
     if request.method == "POST":
         username = request.POST["username"]
