@@ -46,18 +46,18 @@
             <input class="form-control" type="date" {% if selected_student %} value="{{ selected_student.date_de_naissance }}" {% endif %} name="date_de_naissance" id="date_de_naissance" required>
         </div>
     </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="sex" id="f">
-      <label class="form-check-label" for="f">
-        feminin
-      </label>
-    </div>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="sex" id="m" checked>
-      <label class="form-check-label" for="flexRadioDefault2">
-        masculin
-      </label>
-    </div>
+    <fieldset>
+        <legend class="h5">Sexe :</legend>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sex" id="f">
+            <label class="form-check-label" for="f">Féminin</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="sex" id="m" checked>
+            <label class="form-check-label" for="m">Masculin</label>
+        </div>
+    </fieldset>
+
     <div class="form-group row">
         <label class="col-sm-2 col-form-label h5 text-capitalize" for="libelle">adresse:</label>
         <div class="col-sm-4">
@@ -78,7 +78,7 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label h5 text-capitalize" for="libelle">email:</label>
         <div class="col-sm-4">
-            <input class="form-control" type="text" {% if selected_student %} value="{{ selected_student.email }}" {% endif %} name="email" id="email">
+            <input class="form-control" type="email" {% if selected_student %} value="{{ selected_student.email }}" {% endif %} name="email" id="email">
         </div>
     </div>
 
